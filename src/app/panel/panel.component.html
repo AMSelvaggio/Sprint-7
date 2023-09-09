@@ -1,0 +1,62 @@
+<form [formGroup]="form" class="border p-4 my-2">
+    <div>
+        <label>Número de páginas:</label>
+        <button class="orange" (click)="increment('paginas')">+</button>
+        <input formControlName="paginas" type="text" readonly>
+        <button class="orange" (click)="decrement('paginas')">-</button>
+        <label>
+            <button type="button" class=" infoButton btn-info ml-2" data-bs-toggle="modal" data-bs-target="#infoModal">
+              <i class="fas fa-info"></i>
+            </button>
+          </label>
+          
+    <br> <br>
+        <label>Número de idiomas:</label>
+        <button class="orange"  (click)="increment('idiomas')">+</button>
+        <input formControlName="idiomas" type="text" readonly>
+        <button class="orange" (click)="decrement('idiomas')">-</button>
+        <label>
+            <button type="button" class=" infoButton btn btn-info ml-2" data-bs-toggle="modal" data-bs-target="#infoIdiomas">
+              <i class="fas fa-info"></i>
+            </button>
+          </label>
+          
+    </div>
+
+    <!-- Modal -->
+<div  class="modal fade custom-modal" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">Información</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Los botones "+" y "-" sumarán o restarán páginas a su web.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div  class="modal fade custom-modal" id="infoIdiomas" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">Información</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Los botones "+" y "-" sumarán o restarán idomas a su página.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</form>

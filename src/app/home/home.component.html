@@ -1,0 +1,27 @@
+<div>
+    <h1>Selecciona los servicios</h1>
+    <div>
+        <input type="checkbox" id="web" (change)="presupuesto('web', 500)">
+        <label for="web">Hacer una página web (500 €)</label>
+    </div>
+
+    <div *ngIf="serviciosSeleccionados['web']">
+        <app-panel (totalChanged)="updateWebCost($event)"></app-panel>
+    </div>
+
+    <div>
+        <input type="checkbox" id="seo" (change)="presupuesto('seo', 300)">
+        <label for="seo">Hacer una campaña SEO (300 €)</label>
+    </div>
+    <div>
+        <input type="checkbox" id="publicidad" (change)="presupuesto('publicidad', 200)">
+        <label for="publicidad">Hacer una campaña de publicidad (200 €)</label>
+    </div>
+
+    <h2>Total: {{ total }} €</h2>
+</div>
+<br><br>
+
+
+
+<button class="rotournButton" routerLink="/welcome">Volver a la pantalla de bienvenida</button>
